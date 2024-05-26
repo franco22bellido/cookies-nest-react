@@ -14,7 +14,7 @@ export class AppController {
       httpOnly: false,
       maxAge: 60 * 60 * 24 * 7,
     });
-    res.status(200).json({ message: 'login ok', status: 200 });
+    return { message: 'cookies satted ' };
   }
   @Get()
   getCookies(@Req() request: Request) {
