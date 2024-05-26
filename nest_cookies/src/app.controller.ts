@@ -9,12 +9,10 @@ export class AppController {
   @Post()
   setCookies(@Res() res: Response) {
     res.cookie('token', 'token123', {
-      secure: true,
       sameSite: 'none',
-      priority: 'medium',
-      path: '/',
-      domain: 'https://cookies-nest-react.onrender.com',
-      maxAge: 10000,
+      secure: true,
+      httpOnly: false,
+      maxAge: 60 * 60 * 24 * 7,
     });
     res.status(200).json({ message: 'login ok', status: 200 });
   }
