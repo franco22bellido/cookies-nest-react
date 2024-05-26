@@ -8,7 +8,9 @@ export class AppController {
 
   @Post()
   setCookies(@Res() res: Response) {
-    res.cookie('token', 'token123', {});
+    res.cookie('token', 'token123', {
+      sameSite: 'none',
+    });
     res.status(200).json({ message: 'login ok', status: 200 });
   }
   @Get()
