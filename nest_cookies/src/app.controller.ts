@@ -11,6 +11,9 @@ export class AppController {
     res.cookie('token', 'token123', {
       secure: true,
       sameSite: 'none',
+      priority: 'medium',
+      path: '/',
+      domain: 'https://cookies-nest-react.onrender.com',
       maxAge: 10000,
     });
     res.status(200).json({ message: 'login ok', status: 200 });
