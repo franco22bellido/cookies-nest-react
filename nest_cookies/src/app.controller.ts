@@ -13,7 +13,7 @@ export class AppController {
       secure: true,
       maxAge: 60 * 60 * 24 * 7,
     });
-    return { message: '' };
+    return res.status(201).json({ message: "created" });
   }
   @Get()
   getCookies(@Req() request: Request) {
