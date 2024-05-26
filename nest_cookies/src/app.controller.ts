@@ -8,12 +8,12 @@ export class AppController {
 
   @Post()
   setCookies(@Res() res: Response) {
-    res.cookie('token', 'token123', {
+    res.cookie('cookie', 'cookie_test', {
       sameSite: 'none',
       secure: true,
       maxAge: 60 * 60 * 24 * 7,
     });
-    return res.status(201).json({ message: "created" });
+    return res.status(201).json({ message: 'created' });
   }
   @Get()
   getCookies(@Req() request: Request) {
