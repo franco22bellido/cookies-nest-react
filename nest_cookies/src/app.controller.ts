@@ -7,11 +7,11 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Post()
-  setCookies(@Res({ passthrough: true }) res: Response) {
+  setCookies(@Res({ passthrough: false }) res: Response) {
     res.cookie('token', 'token123', {
       maxAge: 1000 * 60 * 60 * 24 * 7,
       httpOnly: false,
-      sameSite: 'lax',
+      sameSite: 'none',
       secure: true,
     });
     res.status(200).json({ message: 'login ok', status: 200 });
