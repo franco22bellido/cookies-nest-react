@@ -11,10 +11,9 @@ export class AppController {
     res.cookie('token', 'token123', {
       sameSite: 'none',
       secure: true,
-      httpOnly: false,
       maxAge: 60 * 60 * 24 * 7,
     });
-    return { message: 'cookies satted ' };
+    return { message: '' };
   }
   @Get()
   getCookies(@Req() request: Request) {
