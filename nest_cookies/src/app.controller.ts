@@ -7,14 +7,8 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Post()
-  setCookies(@Res({ passthrough: false }) res: Response) {
-    res.cookie('token', 'token123', {
-      maxAge: 1000 * 60 * 60 * 24 * 7,
-      httpOnly: false,
-      sameSite: 'none',
-      secure: true,
-      domain: 'https://cookiesreact.vercel.app',
-    });
+  setCookies(@Res() res: Response) {
+    res.cookie('token', 'token123', {});
     res.status(200).json({ message: 'login ok', status: 200 });
   }
   @Get()
