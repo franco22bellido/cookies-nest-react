@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const _instance = axios.create({
-     baseURL: 'https://cookies-nest-react.onrender.com',
+     baseURL: 'https://cookies-nest.onrender.com',
      withCredentials: true
 })
 
