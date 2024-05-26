@@ -13,6 +13,7 @@ export class AppController {
       httpOnly: false,
       sameSite: 'none',
       secure: true,
+      domain: 'https://cookiesreact.vercel.app',
     });
     res.status(200).json({ message: 'login ok', status: 200 });
   }
