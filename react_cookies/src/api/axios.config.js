@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const instance = axios.create({
-     withCredentials: true,
-     baseURL: 'https://cookies-nest-react.onrender.com'
+const _instance = axios.create({
+     baseURL: 'https://cookies-nest-react.onrender.com',
+     withCredentials: true
 })
 
-export default instance;
+export default _instance

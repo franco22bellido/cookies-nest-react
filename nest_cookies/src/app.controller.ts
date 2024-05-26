@@ -11,7 +11,7 @@ export class AppController {
     res.cookie('token', 'token123', {
       maxAge: 1000 * 60 * 60 * 24 * 7,
       httpOnly: false,
-      sameSite: 'none',
+      sameSite: 'lax',
       secure: true,
     });
     res.status(200).json({ message: 'login ok', status: 200 });
