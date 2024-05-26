@@ -11,6 +11,7 @@ export class AppController {
     res.cookie('cookie', 'cookie_test', {
       sameSite: 'none',
       secure: true,
+      httpOnly: true,
       maxAge: 60 * 60 * 24 * 7,
     });
     return res.status(201).json({ message: 'created' });
