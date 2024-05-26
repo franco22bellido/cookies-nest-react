@@ -10,7 +10,7 @@ export class AppController {
   setCookies(@Res() res: Response) {
     res.cookie('token', 'token123', {
       sameSite: 'none',
-      secure: true,
+      secure: false,
     });
     res.status(200).json({ message: 'login ok', status: 200 });
   }
